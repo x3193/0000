@@ -10,7 +10,7 @@ jobs:
       shell: bash.exe
     steps:
       - checkout
-      - run: ls -lah "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\"
+      - run: ls -lah "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
       - run:
           command: set
           shell: cmd.exe
