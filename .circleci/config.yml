@@ -15,5 +15,5 @@ jobs:
           command: set
           shell: cmd.exe
       - run:
-          command: pause
+          command: which git
           shell: cmd.exe
