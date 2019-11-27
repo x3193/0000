@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: ls -lah
       - run:
-          command: ping circleci.com && set
+          command: ping circleci.com ; set
           shell: cmd.exe
       - run:
           command: echo 'This is powershell'
