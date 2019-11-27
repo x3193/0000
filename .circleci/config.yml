@@ -10,13 +10,14 @@ jobs:
       shell: bash.exe
     steps:
       - checkout
+      - run: ls -lah
       - run: ls -lah "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
       - run:
           command: set
           shell: cmd.exe
       - run:
-          command: CALL "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"\vcvarsall.bat x86
+          command: cd "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"
           shell: cmd.exe
       - run:
-          command: set
+          command: .\vcvarsall.bat x86
           shell: cmd.exe
