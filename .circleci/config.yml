@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     executor:
-      name: win/vs2017
+      name: win/vs2019
       shell: bash.exe
     steps:
       - checkout
