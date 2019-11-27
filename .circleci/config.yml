@@ -6,11 +6,17 @@ orbs:
 jobs:
   build:
     executor:
-      name: win/vs2017
+      name: win/vs2015
       shell: bash.exe
     steps:
       - checkout
       - run: ls -lah
+      - run:
+          command: set
+          shell: cmd.exe
+      - run:
+          command: CALL "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86
+          shell: cmd.exe
       - run:
           command: set
           shell: cmd.exe
