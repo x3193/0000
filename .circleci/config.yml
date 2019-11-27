@@ -12,8 +12,5 @@ jobs:
       - checkout
       - run: ls -lah
       - run:
-          command: ping circleci.com
-          shell: cmd.exe
-      - run:
           command: set
           shell: cmd.exe
