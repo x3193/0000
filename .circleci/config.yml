@@ -14,6 +14,3 @@ jobs:
       - run:
           command: set
           shell: cmd.exe
-      - run:
-          command: which git
-          shell: cmd.exe
