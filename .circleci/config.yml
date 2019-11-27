@@ -14,3 +14,6 @@ jobs:
       - run:
           command: set
           shell: cmd.exe
+      - run:
+          command: pause
+          shell: cmd.exe
