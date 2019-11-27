@@ -1,0 +1,32 @@
+language: c
+cache: ccache
+
+os: windows
+
+compiler: msvc
+
+install:
+  - set
+
+env:
+    global:
+        - JOBS=1
+    matrix:
+        - CONFIGURE_ARGS='-Uusethreads'
+        - CONFIGURE_ARGS='-Dusethreads'
+        - CONFIGURE_ARGS='-DPERL_GLOBAL_STRUCT'
+        - CONFIGURE_ARGS='-DPERL_GLOBAL_STRUCT_PRIVATE'
+        - CONFIGURE_ARGS='-Duseshrplib -Dusesitecustomize'
+        - CONFIGURE_ARGS='-Duserelocatableinc'
+
+# only use gcc on linux, and only use clang on osx for now
+matrix:
+  exclude:
+  - compiler: clang
+    os: windows
+  - compiler: gcc
+    os: windows
+
+script:
+  - set
+
